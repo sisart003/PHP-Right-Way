@@ -7,8 +7,19 @@
 </head>
 <body>
     
+<h1>PHP The Right Way</h1>
+<!-- Basics -->
+ <?php 
+ 
+    # Output
+    echo 'Hello, World!';
+    
+    #variables
+    $name = 'Chrishart';
 
+ ?>
 
-<!-- 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 -->
+ <h1><?= $name ?></h1>
+
 </body>
 </html>
