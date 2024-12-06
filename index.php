@@ -189,6 +189,98 @@
     echo '<h3><a href="https://www.php.net/manual/en/language.operators.precedence.php" target="_blank">Source here</a></h3>';
     echo '<br>';
 
+    echo '<hr>';
+
+    # Conditionals
+    echo '<h1>Conditionals</h1>';
+    echo 'if / else / elseif / else if' . '<br>';
+
+    # if / else / elseif / else if
+
+    $points = 100;
+    if($points >= 90){
+        echo 'A';
+    }elseif($points >= 110){
+        echo 'B';
+    }else{
+        echo 'C';
+    }
+
+    echo '<br>';
+
+    # Loops
+    echo '<h1>Loops</h1>';
+    echo 'while do-while for foreach';
+
+    $while_level = 0;
+    $do_while_level = 0;
+
+    # While
+    echo '<p>While Loop</p>';
+    while($while_level <= 10){
+        echo $while_level++ . '<br>';
+    }
+
+    # Do While
+    echo '<p>Do While Loop</p>';
+    do{
+        echo $do_while_level. '<br>';
+        $do_while_level++;
+    }while($do_while_level <= 10);
+
+    echo '<p>For Loop</p>';
+    for($for_level = 0; $for_level <= 10; $for_level++){
+        echo $for_level . '<br>';
+    }
+
+    # foreach
+    echo '<p>Foreach Loop</p>';
+
+    $foreach_level = ['Easy', 'Intermediate', 'Hard', 'Expert', 'Philippines'];
+    foreach ($foreach_level as $key => $levels) {
+        echo ++$key . ' : ' . $levels . '<br>';
+    }
+
+    echo '<br>';
+
+    # Switch Statements
+    echo '<h1>Switch Statement</h1>';
+
+    $legal_age = 'IDK';
+
+    switch ($legal_age) {
+        case 18:
+            echo 'Yes' . '<br>';
+            break;
+        case 17:
+            echo 'No' . '<br>';
+            break;
+        default:
+            echo 'Go to PSA' . '<br>';
+            break;
+    }
+
+    echo '<br>';
+
+    # Match
+    echo '<h1>Match</h1>';
+
+    $available = 1;
+
+    match($available){
+        1 => print 'Yes',
+        2 => print 'No',
+        3 => print 'Not Sure'
+    };
+
+    echo '<br>';
+
+    # Return, Declare & Tickable Statements
+    echo '<h1>Return, Declare & Tickable Statements</h1>';
+    
+    echo '<br>';
+    echo '<hr>';
+
 ?>
 
 </body>
