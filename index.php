@@ -182,6 +182,12 @@
     # Nullsafe Operator
     echo 'Nullsafe Operator';
     echo '<br>';
+    echo '<hr>';
+
+    # Operator Precedence & Associativity
+    echo '<h1>Operator Precedence & Associativity</h1>';
+    echo '<h3><a href="https://www.php.net/manual/en/language.operators.precedence.php" target="_blank">Source here</a></h3>';
+    echo '<br>';
 
 ?>
 
