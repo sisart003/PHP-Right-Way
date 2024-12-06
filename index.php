@@ -118,10 +118,72 @@
 
     echo '<hr>';
 
-    # Expressions
-    echo "<h1>Expressions</h1>";
-    
- ?>
+    # Expressions & Operators
+    echo "<h1>Expressions & Operators</h1>";
+    echo "<br>";
+
+    #Operators
+
+    # arithmetic
+    # +-*/
+    echo 'Arithmetic Operators | +, -, *, /';
+    echo "<br>";
+
+    # Assignment
+    # = += -= *= /= %= **=
+    echo 'Assignment Operators | = += -= *= /= %= **=';
+    echo "<br>";
+
+    # String
+    # . .=
+    echo 'String | . .=';
+    echo "<br>";
+
+    # Comparison Operators
+    # == === != <> !== < > <= >= <=> ?? ?:
+    echo 'Comparison Operators | == === != <> !== < > <= >= <=> ?? ?:';
+    echo "<br>";
+
+    # Error Control Operators
+    # @
+    echo 'Error Control Operator | @';
+    echo "<br>";
+
+    # Increment / Decrement Operators
+    # ++ --
+    echo 'Increment / Decrement Operators | ++ --';
+    echo "<br>";
+
+    # Logical Operators
+    # && || ! AND OR XOR
+    echo "Logical Operators | && || ! AND OR XOR";
+    echo "<br>";
+
+    # Bitwise Operators
+    # & | ^ ~ << >>
+    echo "Bitwise Operators | & | ^ ~ << >>";
+    echo "<br>";
+
+    # Array Operators 
+    # + == === != <> !==
+    echo "Array Operators | + == === != <> !==";
+    echo "<br>";
+
+    # Execution Operators
+    # ``
+    echo "Execution Operators | ``";
+    echo "<br>";
+
+    # Type Operators
+    # instanceof
+    echo 'Type Operator | instanceof';
+    echo "<br>";
+
+    # Nullsafe Operator
+    echo 'Nullsafe Operator';
+    echo '<br>';
+
+?>
 
 </body>
 </html>
