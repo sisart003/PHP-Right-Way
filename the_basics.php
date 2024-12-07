@@ -318,113 +318,18 @@
     // echo '<hr>';
 
     # Functions
-    // echo '<h1>Functions</h1>';
+    echo '<h1>Functions</h1>';
 
-    // function foo(){
-    //     return 'Hello, World!';
-    // }
+    function foo(){
+        return 'Hello, World!';
+    }
 
-    // echo foo();
+    echo foo();
 
-    // echo '<br>';
-    // echo '<hr>';
-
-    # Named Arguments - Variadic Functions & Unpacking
-
-    // function sub(...$numbers): int|float{
-        // $sum = 0;
-
-        // foreach($numbers as $number){
-        //     $sum += $number;
-        // }
-
-        // return $sum;
-
-    //     return array_sum($numbers);
-    // }
-
-    // echo sub(1, 2, 3, 4, 5);
-
-    // echo '<br>';
-    // echo '<hr>';
-
-    # Varialbe Scopes
-
-    # global - $GLOBALS['x'];
-
-    # Variable, Anonymous, Callable, Closure & Arrow Functions
-    
-    # variable functions
-    // function trying(int|float ...$numbers): int|float{
-    //     return array_sum($numbers);
-    // }
-
-    // $x = 'trying';
-
-    // if(is_callable($x)){
-    //     echo $x(1, 2, 3, 4, 5);
-    // }else{
-    //     echo 'Not Callable';
-    // }
-
-    # Anonymous Function
-
-    // $b = 4;
-    // $y = function(int|float ...$numbers) use($b): int|float{
-    //     echo $b . '<br>';
-    //     return array_sum($numbers);
-    // };
-
-    // echo $y(1, 2, 3, 4);
-    
-    # Callback
-
-    // $arr = [1, 2, 3, 4];
-    // $arr2 = array_map(function($element){
-    //     return $element * 2;
-    // }, $arr);
-
-    // echo '<pre>';
-    //     print_r($arr);
-    //     print_r($arr2);
-    // echo '</pre>';
-
-    # Arrow Functions
-    // $arr = [1, 2, 3, 4];
-    // $arr2 = array_map(fn($number) => $number * $number, $arr);
-
-    // echo '<pre>';
-    //     print_r($arr);
-    //     print_r($arr2);
-    // echo '</pre>';
+    echo '<br>';
+    echo '<hr>';
 
 ?>
-
-    <!-- <?php echo 'Date and Time' ?> -->
-    <!-- <h1>Date and Time</h1> -->
-    <!-- https://www.php.net/manual/en/function.date.php -->
-    <?php
-        // $currentTime = time();
-
-        // echo $currentTime . '<br>';
-        // echo $currentTime + 5 * 25 * 60 * 60 . '<br>';
-        // echo date('m/d/Y g:ia') . '<br>';
-    ?>
-
-    <h1>Array Functions</h1>
-    <?php
-
-    # Array Functions
-    # https://www.php.net/manual/en/ref.array.php
-    
-    ?>
-
-    <h1>Configuration File - PHP.INI</h1>
-    <?php
-        # https://www.php.net/manual/en/configuration.file.php
-        # error_reporting, error_log, display_errors
-    ?>
-    
 
 </body>
 </html>
