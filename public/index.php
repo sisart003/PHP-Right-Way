@@ -14,9 +14,10 @@
  
  <?php
 
-    // require 'Transaction.php';
+    require '../the_oop.php';
 
-    
+    $transaction = new Transaction(5, 'Kanor Cubers');
+
 
  ?>
 
