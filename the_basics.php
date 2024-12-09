@@ -1,16 +1,5 @@
-<?php  declare(strict_types=1); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP | The Right Way</title>
-</head>
-<body>
-    
-<h1>PHP The Right Way</h1>
 <!-- Basics -->
- <?php 
+<?php 
     # Output
     // echo "Hello, World!";
     // echo '<br><hr>';
@@ -318,18 +307,144 @@
     // echo '<hr>';
 
     # Functions
-    echo '<h1>Functions</h1>';
+    // echo '<h1>Functions</h1>';
 
-    function foo(){
-        return 'Hello, World!';
-    }
+    // function foo(){
+    //     return 'Hello, World!';
+    // }
 
-    echo foo();
+    // echo foo();
 
-    echo '<br>';
-    echo '<hr>';
+    // echo '<br>';
+    // echo '<hr>';
+
+    # Named Arguments - Variadic Functions & Unpacking
+
+    // function sub(...$numbers): int|float{
+        // $sum = 0;
+
+        // foreach($numbers as $number){
+        //     $sum += $number;
+        // }
+
+        // return $sum;
+
+    //     return array_sum($numbers);
+    // }
+
+    // echo sub(1, 2, 3, 4, 5);
+
+    // echo '<br>';
+    // echo '<hr>';
+
+    # Varialbe Scopes
+
+    # global - $GLOBALS['x'];
+
+    # Variable, Anonymous, Callable, Closure & Arrow Functions
+    
+    # variable functions
+    // function trying(int|float ...$numbers): int|float{
+    //     return array_sum($numbers);
+    // }
+
+    // $x = 'trying';
+
+    // if(is_callable($x)){
+    //     echo $x(1, 2, 3, 4, 5);
+    // }else{
+    //     echo 'Not Callable';
+    // }
+
+    # Anonymous Function
+
+    // $b = 4;
+    // $y = function(int|float ...$numbers) use($b): int|float{
+    //     echo $b . '<br>';
+    //     return array_sum($numbers);
+    // };
+
+    // echo $y(1, 2, 3, 4);
+    
+    # Callback
+
+    // $arr = [1, 2, 3, 4];
+    // $arr2 = array_map(function($element){
+    //     return $element * 2;
+    // }, $arr);
+
+    // echo '<pre>';
+    //     print_r($arr);
+    //     print_r($arr2);
+    // echo '</pre>';
+
+    # Arrow Functions
+    // $arr = [1, 2, 3, 4];
+    // $arr2 = array_map(fn($number) => $number * $number, $arr);
+
+    // echo '<pre>';
+    //     print_r($arr);
+    //     print_r($arr2);
+    // echo '</pre>';
 
 ?>
 
-</body>
-</html>
+    <!-- <?php echo 'Date and Time' ?> -->
+    <!-- <h1>Date and Time</h1> -->
+    <!-- https://www.php.net/manual/en/function.date.php -->
+    <?php
+        // $currentTime = time();
+
+        // echo $currentTime . '<br>';
+        // echo $currentTime + 5 * 25 * 60 * 60 . '<br>';
+        // echo date('m/d/Y g:ia') . '<br>';
+    ?>
+
+    <h1>Array Functions</h1>
+    <?php
+
+    # Array Functions
+    # https://www.php.net/manual/en/ref.array.php
+    
+    ?>
+
+    <h1>Configuration File - PHP.INI</h1>
+    <?php
+        # https://www.php.net/manual/en/configuration.file.php
+        # error_reporting, error_log, display_errors
+
+        // mkdir('foo');
+    // rmdir('foo');
+
+    // if(file_exists('foo.txt')){
+    //     echo filesize('foo.txt');
+
+    //     file_put_contents('foot.txt', 'Hello World!');
+
+    //     clearstatcache();
+    //     echo filesize('foo.txt');
+    // }else{
+    //     echo "File Not Found!";
+    // }
+
+    // $file = fopen('foot.txt', 'r');
+
+    // if(! file_exists('foot.txt')){
+    //     echo 'File not found!';
+
+    //     return;
+    // }
+
+    // $file = fopen('foo.txt', 'r');
+
+    // while(($line = fgets($file)) !== false){
+    //     echo $line . '<br>';
+    // }
+
+    // fclose($file);
+
+    // file_put_contents('bar.txt', 'hello');
+
+    // file_put_contents('bar.txt', 'world', FILE_APPEND);
+    ?>
+    
