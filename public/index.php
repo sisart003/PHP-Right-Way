@@ -14,10 +14,20 @@
  
  <?php
 
-    require '../the_oop.php';
+    require_once '../the_oop.php';
 
-    $transaction = new Transaction(5, 'Kanor Cubers');
+    $account = new BankAccount();
 
+    # Access Modifiers
+    $account->setAccountNumber(273897423894);
+    
+    $account->balance = 100;
+
+    # Method Chaining
+    $account->deposit(100)->deposit(200)->deposit(300);
+
+    echo $account->balance . '<br>';
+    echo $account->getAccountNumber();
 
  ?>
 
