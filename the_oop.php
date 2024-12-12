@@ -6,8 +6,13 @@
         #properties
         // public int $accountNumber;
         // public float $balance;
+        public int $receipt;
+
+        #readonly property
+        public readonly string $username;
 
         # Constructor / Destructor
+        # Type Hinting
         public function __construct(public int $accountNumber, public float | int $balance)
         {
             $this->accountNumber = $accountNumber;
@@ -37,7 +42,11 @@
             return $this->accountNumber;
         }
 
-        public function setAccountNumber($accountNumber){
-            $this->accountNumber = $accountNumber;
+        public function setUsername(string $username){
+            $this->username = $username;
+        }
+
+        public function getUsername(){
+            return $this->username;
         }
     }

@@ -22,12 +22,17 @@
     // $account->setAccountNumber();
 
     $account->balance = 100;
+    $account->receipt = 20;
+    $account->setUsername('Sisart003');
 
     # Method Chaining
     $account->deposit(100)->deposit(200)->deposit(300);
 
     echo $account->balance . '<br>';
     echo $account->getAccountNumber();
+    echo '<br>';
+    var_dump($account->receipt);
+    echo '<br>' . $account->getUsername();
 
  ?>
 
