@@ -16,11 +16,11 @@
 
     require_once '../the_oop.php';
 
-    $account = new BankAccount();
+    $account = new BankAccount(273897232423894, 200);
 
     # Access Modifiers
-    $account->setAccountNumber(273897423894);
-    
+    // $account->setAccountNumber();
+
     $account->balance = 100;
 
     # Method Chaining

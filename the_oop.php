@@ -4,8 +4,15 @@
     class BankAccount
     {   
         #properties
-        private int $accountNumber;
-        public float $balance;
+        // public int $accountNumber;
+        // public float $balance;
+
+        # Constructor / Destructor
+        public function __construct(public int $accountNumber, public float | int $balance)
+        {
+            $this->accountNumber = $accountNumber;
+            $this->balance = $balance;
+        }
 
         #methods
         public function deposit($amount){
