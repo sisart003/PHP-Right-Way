@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP | The Right Way</title>
-    <link rel="shortcut icon" href="https://i.pinimg.com/736x/26/ce/c1/26cec153ed87b564bdf180b232a949b3.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/b8/cf/1f/b8cf1fe8215eaf054ce7ddf7e2c1056e.jpg" type="image/x-icon">
 </head>
 <body>
     
@@ -15,8 +15,8 @@
  <?php
 
     require_once '../the_oop.php';
-
     
+
 
  ?>
 
