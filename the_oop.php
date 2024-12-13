@@ -74,95 +74,140 @@
 
 
     # Inheritance
-    class BankAccount
-    {
-        private $balance;
+    // class BankAccount
+    // {
+    //     private $balance;
 
-        public function __construct($balance)
-        {
-            $this->balance = $balance;
-        }
+    //     public function __construct($balance)
+    //     {
+    //         $this->balance = $balance;
+    //     }
 
-        public function getBalance()
-        {
-            return $this->balance;
-        }
+    //     public function getBalance()
+    //     {
+    //         return $this->balance;
+    //     }
 
-        public function deposit($amount)
-        {
-            if($amount > 0){
-                $this->balance += $amount;
-            }
+    //     public function deposit($amount)
+    //     {
+    //         if($amount > 0){
+    //             $this->balance += $amount;
+    //         }
 
-            return $this;
-        }
+    //         return $this;
+    //     }
 
-        public function withdraw($amount)
-        {
-            if($amount > 0 && $amount <= $this->balance){
-                $this->balance -= $amount;
-                return true;
-            }
+    //     public function withdraw($amount)
+    //     {
+    //         if($amount > 0 && $amount <= $this->balance){
+    //             $this->balance -= $amount;
+    //             return true;
+    //         }
 
-            return false;
-        }
+    //         return false;
+    //     }
 
-        public final function greetings()
-        {
-            return 'Hello, World!';
-        }
-    }
+    //     public final function greetings()
+    //     {
+    //         return 'Hello, World!';
+    //     }
+    // }
 
-    class SavingAccount extends BankAccount
-    {
-        private $interestRate;
+    // class SavingAccount extends BankAccount
+    // {
+    //     private $interestRate;
 
-        public function __construct($balance, $interestRate)
-        {
-            parent::__construct($balance);
-            $this->interestRate = $interestRate;
-        }
+    //     public function __construct($balance, $interestRate)
+    //     {
+    //         parent::__construct($balance);
+    //         $this->interestRate = $interestRate;
+    //     }
 
-        public function setInterestRate($interestRate)
-        {
-            $this->interestRate = $interestRate;
-        }
+    //     public function setInterestRate($interestRate)
+    //     {
+    //         $this->interestRate = $interestRate;
+    //     }
 
-        public function addInterest()
-        {
+    //     public function addInterest()
+    //     {
             // calculate interest
-            $interest = $this->interestRate * $this->getBalance();
+            // $interest = $this->interestRate * $this->getBalance();
 
             // deposite interest to the balance
-            $this->deposit($interest);
-        }
+    //         $this->deposit($interest);
+    //     }
 
-    }
+    // }
 
-    class CheckingAccount extends BankAccount
-    {
-        private $minBalance;
+    // class CheckingAccount extends BankAccount
+    // {
+    //     private $minBalance;
 
-        public function __construct($amount, $minBalance)
-        {
-            if($amount > 0 && $amount >= $minBalance){
-                parent::__construct($amount);
-                $this->minBalance;
-            }else{
-                throw new InvalidArgumentException('amount must be more than zero and higher than the minimum balance');
-            }
-        }
+    //     public function __construct($amount, $minBalance)
+    //     {
+    //         if($amount > 0 && $amount >= $minBalance){
+    //             parent::__construct($amount);
+    //             $this->minBalance;
+    //         }else{
+    //             throw new InvalidArgumentException('amount must be more than zero and higher than the minimum balance');
+    //         }
+    //     }
 
-        public function withdraw($amount)
-        {
-            $canWithdraw = $amount > 0 && $this->getBalance() - $amount > $this->minBalance;
+    //     public function withdraw($amount)
+    //     {
+    //         $canWithdraw = $amount > 0 && $this->getBalance() - $amount > $this->minBalance;
 
-            if($canWithdraw){
-                parent::withdraw($amount);
+    //         if($canWithdraw){
+    //             parent::withdraw($amount);
 
-                return true;
-            }
+    //             return true;
+    //         }
 
-            return false;
-        }
-    }
+    //         return false;
+    //     }
+    // }
+
+    // $greet = new BankAccount(1000);
+    // echo $greet->greetings() . '<br>';
+
+    // $account = new SavingAccount(1000, 0.05);
+
+    // $account->deposit(100);
+
+    # set interest rate
+    // $account->setInterestRate(0.05);
+    // $account->addInterest();
+    // echo $account->getBalance();
+    // echo '<br>';
+
+    # check account balance
+    // $balance = new CheckingAccount(200, 0);
+
+    // $getBalance = $balance->withdraw(0);
+
+    // echo $getBalance;
+
+
+    # Abstract
+    // abstract class Dumper{
+        
+    //     abstract public function dump($data);
+
+    // }
+
+    // class WebDumper extends Dumper
+    // {
+    //     public function dump($data)
+    //     {
+    //         echo '<pre>';
+    //         var_dump($data);
+    //         echo '</pre>';
+    //     }
+    // }
+
+    // $greet = new WebDumper();
+
+    // $greet->dump('PHP abstract class is awesome!');
+
+    # Interfaces
+    

@@ -16,25 +16,7 @@
 
     require_once '../the_oop.php';
 
-    $greet = new BankAccount(1000);
-    echo $greet->greetings() . '<br>';
 
-    $account = new SavingAccount(1000, 0.05);
-
-    $account->deposit(100);
-
-    # set interest rate
-    $account->setInterestRate(0.05);
-    $account->addInterest();
-    echo $account->getBalance();
-    echo '<br>';
-
-    # check account balance
-    $balance = new CheckingAccount(200, 0);
-
-    $getBalance = $balance->withdraw(0);
-
-    echo $getBalance;
 
  ?>
 
