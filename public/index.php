@@ -16,23 +16,25 @@
 
     require_once '../the_oop.php';
 
-    $account = new BankAccount(273897232423894, 200);
+    $greet = new BankAccount(1000);
+    echo $greet->greetings() . '<br>';
 
-    # Access Modifiers
-    // $account->setAccountNumber();
+    $account = new SavingAccount(1000, 0.05);
 
-    $account->balance = 100;
-    $account->receipt = 20;
-    $account->setUsername('Sisart003');
+    $account->deposit(100);
 
-    # Method Chaining
-    $account->deposit(100)->deposit(200)->deposit(300);
-
-    echo $account->balance . '<br>';
-    echo $account->getAccountNumber();
+    # set interest rate
+    $account->setInterestRate(0.05);
+    $account->addInterest();
+    echo $account->getBalance();
     echo '<br>';
-    var_dump($account->receipt);
-    echo '<br>' . $account->getUsername();
+
+    # check account balance
+    $balance = new CheckingAccount(200, 0);
+
+    $getBalance = $balance->withdraw(0);
+
+    echo $getBalance;
 
  ?>
 
