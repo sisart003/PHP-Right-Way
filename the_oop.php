@@ -501,3 +501,72 @@
     // $logger = new Logger();
     // $logger->log('this is a test message #1');
     // $logger->logToDatabase('this is a test message #2');
+
+    # Static Methods and Properties
+        //     class App
+        //     {
+        //         private static $app = null;
+
+        //         private function __construct()
+        //         {
+
+        //         }
+
+        //         public static function get() : App
+        //         {
+        //                 if(!self::$app){
+        //                         self::$app = new App();
+        //                 }
+
+        //                 return self::$app;
+        //         }
+
+        //         public function bootstrap(): void
+        //         {
+        //                 echo 'App is bootstrapping....';
+        //         }
+
+        //     }
+
+
+        # PHP Class constants
+        // class Circle
+        // {
+        //         const PI = M_PI;
+
+        //         private $radius;
+
+        //         public function __construct(float $radius)
+        //         {
+        //                 $this->radius = $radius;
+        //         }
+
+        //         public function area(): float
+        //         {
+        //                 return self::PI * $this->radius ** 2;
+        //         }
+        // }
+
+        // echo M_PI . '<br>';
+        // echo Circle::PI . '<br>';
+        // $circol = new Circle( Circle::PI);
+    
+        // echo $circol->area();
+
+        # Late Static Binding
+        // class Model
+        // {
+        //         protected static $tableName = 'Model';
+
+        //         public static function getTableName()
+        //         {
+        //                 return static::$tableName;
+        //         }
+        // }
+
+        // class User extends Model
+        // {
+        //         protected static $tableName = 'User';
+        // }
+
+        // echo User::getTableName();
