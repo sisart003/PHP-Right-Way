@@ -973,4 +973,67 @@
         //     echo 'p3 and p4 are not equal';
         // }
 
-        
+        # Anonymous Class
+        // $logger = new class {
+        //     public function log(string $message): void
+        //     {
+        //         echo $message . '<br>';
+        //     }
+        // };
+
+        // $logger->log('Hello');
+        // echo get_class($logger);
+
+        # Imprelemting an interface
+        // interface Logger
+        // {
+        //     public function log(string $message): void;
+        // }
+
+        // $logger = new class implements Logger{
+        //     public function log(string $message): void
+        //     {
+        //         echo $message . '<br>';
+        //     }
+        // };
+
+        // // type hint
+        // function save(Logger $logger)
+        // {
+        //     $logger->log('The file was updated successfully');
+        // }
+
+        // save($logger);
+
+        // Inheriting a class
+        // interface Logger
+        // {
+        //     public function log(string $message): void;
+        // }
+
+        // abstract class SimpleLogger implements Logger
+        // {
+        //     protected $newLine;
+
+        //     public function __construct(bool $newLine)
+        //     {
+        //         $this->newLine = $newLine;
+        //     }
+
+        //     abstract public function log(string $message) : void;
+        // }
+
+        // $logger = new class(true) extends SimpleLogger{
+        //     public function __construct(bool $newLine)
+        //     {
+        //         parent::__construct($newLine);
+        //     }
+
+        //     public function log(string $message): void
+        //     {
+        //         echo $this->newLine ? $message . PHP_EOL : $message;
+        //     }
+        // };
+
+        // $logger->log('Hello');
+        // $logger->log('Goodbye');
