@@ -777,3 +777,160 @@
         // echo '<pre>';
         // var_dump($str);
         // echo '</pre>';
+
+        # unserialize()
+        // class Customer
+        // {
+        //     public function __construct(
+        //         private int $id,
+        //         private string $name,
+        //         private string $email
+        //     ){
+
+        //     }
+
+        //     public function getInitial()
+        //     {
+        //         if($this->name !== ''){
+        //             return strtoupper(substr($this->name, 0, 1));
+        //         }
+        //     }
+        // }
+
+        // $customer = new Customer(10, 'John Doe', 'john.doe@example.com');
+
+        // # serialize
+        // // $str = serialize($customer);
+        // // file_put_contents('customer.dat', $str);
+
+        // # unserialize
+        // $str = file_get_contents('customer.dat');
+        // $customer = unserialize($str);
+
+        // var_dump($customer);
+
+        # __unserialize()
+        // class FileReader
+        // {
+
+
+        //     private $filehandle;
+
+        //     private $filename;
+
+
+        //     public function __construct(string $filename)
+        //     {
+        //         $this->filename = $filename;
+        //         $this->open();
+        //     }
+
+        //     private function open()
+
+        //     {
+        //         $this->filehandle = fopen($this->filename, 'r');
+
+        //         return $this;
+        //     }
+
+        //     public function read()
+        //     {
+        //         $contents = fread($this->filehandle, filesize($this->filename));
+
+        //         return nl2br($contents);
+        //     }
+
+        //     public function close()
+        //     {
+        //         if ($this->filehandle) {
+        //             fclose($this->filehandle);
+        //         }
+        //     }
+
+
+        //     public function __sleep(): array
+        //     {
+        //         $this->close();
+
+        //         return array('filename');
+        //     }
+
+        //     public function __unserialize(): void
+        //     {
+        //         $this->open();
+        //     }
+        // }
+
+        // $filename = 'customer.dat';
+    
+        // // serialize the $fileReader
+        // file_put_contents(
+        //     $filename,
+        //     serialize(new FileReader('readme.txt'))
+        // );
+    
+        // // unserialized the file reader
+        // $file_reader = unserialize(file_get_contents($filename));
+    
+        // echo $file_reader->read();
+    
+        // $file_reader->close();
+
+        # clone object
+        // class Person
+        // {
+        //     public $name;
+
+        //     public function __construct($name)
+        //     {
+        //         $this->name = $name;
+        //     }
+        // }
+
+        // $bob = new Person('Bob');
+
+        // // assign bob to alex and change the name
+        // // $alex = $bob;
+        // // $alex->name = 'Alex';
+
+        // // clone an object
+        // $alex = clone $bob;
+        // $alex->name = 'Alex';
+
+        // // show both objects
+        // var_dump($bob);
+        // var_dump($alex);
+
+        // class Address
+        // {
+        //     public $street;
+        //     public $city;
+        // }
+
+        // class Person
+        // {
+        //     public $name;
+        //     public $address;
+
+        //     public function __construct($name)
+        //     {
+        //         $this->name = $name;
+        //         $this->address = new Address();
+        //     }
+
+        //     public function __clone()
+        //     {
+        //         $this->address = clone $this->address;
+        //     }
+        // }
+
+        // $bob = new Person('Bob');
+        // $bob->address->street = 'North 1st Street';
+        // $bob->address->city = 'San Jose';
+
+        // $alex = clone $bob;
+        // $alex->name = 'Alex';
+        // $alex->address->street = '1 Rizal Park';
+        // $alex->address->city = 'Northern';
+
+        // var_dump($bob);
