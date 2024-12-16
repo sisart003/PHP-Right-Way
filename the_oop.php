@@ -701,3 +701,34 @@
         // echo Str::lower('Hello') . '<br>';
         // echo Str::upper('Hello') . '<br>';
         // echo Str::len('Hello') . '<br>';
+
+        # __invoke()
+        // class Comparator
+        // {
+        //     private $key;
+
+        //     public function __construct(string $key)
+        //     {
+        //         $this->key = $key;
+        //     }
+
+        //     public function __invoke($a, $b)
+        //     {
+        //         return $a[$this->key] <=> $b[$this->key];
+        //     }
+        // }
+
+        // $customers = [
+        //     ['id' => 1, 'name' => 'Jhon', 'credit' => 2000],
+        //     ['id' => 2, 'name' => 'Jane', 'credit' => 4220],
+        //     ['id' => 3, 'name' => 'Jah', 'credit' => 6310],
+        // ];
+
+        // // sort customers by names
+        // usort($customers, new Comparator('name'));
+        // print_r($customers);
+        // echo '<br>';
+
+        // // sort customers by credit
+        // usort($customers, new Comparator('credit'));
+        // print_r($customers);
