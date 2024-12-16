@@ -16,8 +16,6 @@
 
     require_once '../the_oop.php';
 
-    
-
 
 
  ?>

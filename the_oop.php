@@ -732,3 +732,48 @@
         // // sort customers by credit
         // usort($customers, new Comparator('credit'));
         // print_r($customers);
+
+        # Working with Objects
+        # serialize()
+        // class Customer
+        // {
+        //     private $id;
+        //     private $name;
+        //     private $email;
+
+        //     public function __construct(int $id, string $name, string $email)
+        //     {
+        //         $this->id = $id;
+        //         $this->name = $name;
+        //         $this->email = $email;
+        //     }
+
+        //     public function getInitial()
+        //     {
+        //         if($this->name !== ''){
+        //             return strtoupper(substr($this->name, 0, 1));
+        //         }
+        //     }
+
+        //     // __sleep()
+        //     // public function __sleep(): array
+        //     // {
+        //     //     return ['id', 'name'];
+        //     // }
+
+        //     // __serialize()
+        //     public function __serialize(): array
+        //     {
+        //         return [
+        //             'id' => $this->id,
+        //             'name' => $this->name
+        //         ];
+        //     }
+
+        // }
+
+        // $customer = new Customer(10, 'Jhon doe', 'jon.doe@example.com');
+        // $str = serialize($customer);
+        // echo '<pre>';
+        // var_dump($str);
+        // echo '</pre>';
