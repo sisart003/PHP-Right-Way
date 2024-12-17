@@ -1069,4 +1069,18 @@
     
         // $product = new Product();
 
+        # Autoloading Class Files
+        // require_once 'models/Contact.php';
+        // require_once 'functions.php';
+
+        // $contact = new Contact('john.doe@example.com');
+
+        // echo $contact->getEmail();
+        // echo '<br>';
+        // echo Email::send($contact);
+
+        // load_model('Person');
+        // $person = new Person();
+
+        # Use Composer Autoload
         
