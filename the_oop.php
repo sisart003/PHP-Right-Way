@@ -1037,3 +1037,36 @@
 
         // $logger->log('Hello');
         // $logger->log('Goodbye');
+
+        # Namespace
+        // require 'src/Model/Customer.php';
+        // require 'src/Model/Product.php';
+        // require 'src/Database/Logger.php';
+        // require 'src/Utils/Logger.php';
+    
+        // # import namespace or class
+        // use Store\Model\{Customer, Product};
+        // use Store\Utils;
+        // use Store\Database;
+    
+        // $loggers = [
+        //     new Utils\Logger(),
+        //     new Database\Logger()
+        // ];
+    
+        // # or you can use the alternative
+        // // use Store\Utils\Logger as UtilsLogger;
+        // // use Store\Database\Logger as DatabaseLogger;
+    
+        // // $loggers = [
+        // //     new UtilsLogger(),
+        // //     new DatabaseLogger()
+        // // ];
+    
+        // $customer = new Customer('Bob');
+    
+        // echo $customer->getName();
+    
+        // $product = new Product();
+
+        
