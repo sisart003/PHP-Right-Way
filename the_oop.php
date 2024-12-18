@@ -1083,4 +1083,109 @@
         // $person = new Person();
 
         # Use Composer Autoload
+        // $user = new User('admin', '$ecurePa$$w0rd1');
+        // $comment = new Comment("<h1>Hello</h1>");
+
+        // echo $comment->getComment();
+
+        # try...catch
+        // $data = [];
+
+        // try{
+        //     $f = fopen('data.csv', 'r');
+    
+        //     do{
+        //         $row = fgetcsv($f);
+        //         $data[] = $row;
+        //     }while($row);
         
+        //     fclose($f);
+    
+        // }catch(Exception $e){
+        //     echo $e->getMessage();
+        // }
+
+        # ...finally
+        // $data = [];
+        // try{
+        //     $f = open('data.csv', 'r');
+
+        //     while($row = $fgetcsv($f)){
+        //         $data[] = $row;
+        //     }
+        // }catch(Exception $ex){
+        //     echo $ex->getMessage();
+        // }finally{
+        //     if($f){
+        //         fclose($f);
+        //     }
+        // }
+
+        # finally and return
+        // function divide($x, $y)
+        // {
+        //     try{
+        //         $result = $x / $y;
+
+        //         return $result;
+        //     }catch(Exception $e){
+        //         return null;
+        //     }finally{
+        //         return null;
+        //     }
+        // }
+
+        // $result = divide(10, 2);
+        // var_dump($result);
+
+        # Exception class
+        // $exception = new Exception('Invalid password', 100);
+
+        # Throw statement
+        // throw new Exception('Invalid username or password', 100);
+        // function divide($x, $y)
+        // {
+        //     if(!is_numeric($x) || !is_numeric($y)){
+        //         throw new InvalidArgumentException('Both must be numbers');
+        //     }
+
+        //     if($y == 0){
+        //         throw new Exception('Division by zero, y cannot be zero');
+        //     }
+
+        //     return $x / $y;
+        // }
+
+        # Exception Handler
+        # bootstrap.php
+        // set_exception_handler(function(Exception $ex){
+
+        //     // set default timezone
+        //     date_default_timezone_set('America/Los_Angeles');
+    
+        //     // get the current date & time
+        //     $time = date('F j, Y, g:i a e O');
+    
+        //     // format the exception message
+        //     $message = "[{$time}] {$ex->getMessage()}\n";
+    
+        //     // append to the error log
+        //     error_log($message, 3, 'logs/errors.log');
+    
+        //     // show a user-fiendly message
+        //     echo 'Whoops, looks like something went wrong!';
+    
+        // });
+
+        // require 'bootstrap.php';
+    
+        // function add($a, $b)
+        // {
+        //     if(!is_numeric($a) || !is_numeric($a)){
+        //         throw new InvalidArgumentException('Both arguments must be numeric or numeric strings');
+        //     }
+    
+        //     return $a + $b;
+        // }
+    
+        // echo add('Hi', 'there');
