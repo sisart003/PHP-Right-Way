@@ -1189,3 +1189,33 @@
         // }
     
         // echo add('Hi', 'there');
+
+        # Class / Object functions
+        # class_exists
+        
+        // namespace App;
+        // class User
+        // {
+        //     public function avartar(): string
+        //     {
+        //         return 'default';
+        //     }
+        // }
+
+        // // if(class_exists('User')){
+        // //     echo 'The class User exists';
+        // // }else{
+        // //     echo 'The class User does not exist';
+        // // }
+
+        // spl_autoload_register(function ($class){
+        //     echo 'Loading the class ' . $class . '<br>';
+        //     require $class . '.php';
+        // });
+
+        // class_exists('App\User');
+
+        // echo 'Create a new user' . '<br>';
+
+        // $user = new App\User();
+        // echo $user->avartar();
