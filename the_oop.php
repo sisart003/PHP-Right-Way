@@ -1243,3 +1243,46 @@
         // $account = new BankAccount();
         // $exists = method_exists($account, 'compare');
         // var_dump($exists);
+
+        # property_exists
+        // class FileReader
+        // {
+        //     private $filename;
+        //     public $done;
+        //     protected $filesize;
+        //     public static $mimeTypes;
+        // }
+
+        // var_dump(property_exists(FileReader::class, 'filename'));
+        // var_dump(property_exists(FileReader::class, 'done'));
+        // var_dump(property_exists(FileReader::class, 'filesize'));
+        // var_dump(property_exists(FileReader::class, 'mimeTypes'));
+
+        // var_dump(property_exists(FileReader::class, 'status'));
+
+        // abstract class Model
+        // {
+        //     public function load(array $data): self
+        //     {
+        //         foreach ($data as $key => $value) {
+        //             if (property_exists($this, $key)) {
+        //                 $this->$key = $value;
+        //             }
+        //         }
+
+        //         return $this;
+        //     }
+        // }
+
+        // class User extends Model
+        // {
+        //     private $username;
+        //     private $email;
+        //     private $password;
+        // }
+
+        // $user = (new User())->load([
+        //     'username' => 'john',
+        //     'email' => 'john@phptutorial.net',
+        //     'password' => password_hash('VerySecurePa$$1.', PASSWORD_DEFAULT),
+        // ]);
