@@ -1219,3 +1219,27 @@
 
         // $user = new App\User();
         // echo $user->avartar();
+
+        # method_exists
+        // class BankAccount
+        // {
+        //     public function transferTo(BankAccount $other, float $amount)
+        //     {
+                
+        //     }
+
+        //     public static function compare(BankAccount $other) : bool
+        //     {
+        //         return false;
+        //     }
+        // }
+
+        // $exists = method_exists(BankAccount::class, 'transferTo');
+        // var_dump($exists);
+
+        // $exists = method_exists(BankAccount::class, 'deposit');
+        // var_dump($exists);
+
+        // $account = new BankAccount();
+        // $exists = method_exists($account, 'compare');
+        // var_dump($exists);
