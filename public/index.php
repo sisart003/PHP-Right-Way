@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP | The Right Way</title>
-    <link rel="shortcut icon" href="https://i.pinimg.com/736x/b8/cf/1f/b8cf1fe8215eaf054ce7ddf7e2c1056e.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/2a/bf/3c/2abf3c5185c890866176965c7a01d925.jpg" type="image/x-icon">
 </head>
 <body>
     
@@ -14,9 +14,10 @@
  
  <?php
 
-    require_once '../the_oop.php';
+    // require_once '../the_oop.php';
     // require './app/bootstrap.php';
-
+    $pdo = require_once '../the_pdo.php';
+    var_dump($pdo);
 
  ?>
 
