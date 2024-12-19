@@ -17,7 +17,7 @@
     // require_once '../the_oop.php';
     // require './app/bootstrap.php';
     $pdo = require_once '../the_pdo.php';
-    var_dump($pdo);
+    // var_dump($pdo);
 
  ?>
 

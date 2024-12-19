@@ -22,35 +22,35 @@
     // }
 
     # function base
-    function connect($host, $db, $user, $password)
-    {
-        $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
+    // function connect($host, $db, $user, $password)
+    // {
+    //     $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
 
-        try{
-            $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-            return new PDO($dsn, $user, $password, $options);
-        }catch(PDOException $e){
-            die($e->getMessage());
-        }
-    }
+    //     try{
+    //         $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+    //         return new PDO($dsn, $user, $password, $options);
+    //     }catch(PDOException $e){
+    //         die($e->getMessage());
+    //     }
+    // }
 
     // return connect($host, $db, $user, $password);
 
     # class base
-    // class Connection
-    // {
-    //     public static function make($host, $db, $user, $password)
-    //     {
-    //         $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
+    class Connection
+    {
+        public static function make($host, $db, $user, $password)
+        {
+            $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
 
-    //         try{
-    //             $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-    //             return new PDO($dsn, $user, $password, $options);
-    //         }catch(PDOException $e){
-    //             die($e->getMessage());
-    //         }
-    //     }
-    // }
+            try{
+                $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+                return new PDO($dsn, $user, $password, $options);
+            }catch(PDOException $e){
+                die($e->getMessage());
+            }
+        }
+    }
 
     // return Connection::make($host, $db, $user, $password);
 
@@ -84,3 +84,30 @@
     // foreach($statements as $statement){
     //     $conn->exec($statement);
     // }
+
+    # Insert table
+
+    // $name = 'Sisart003';
+    $names = [
+        'berry',
+        'gem',
+        'make'
+    ];
+    // $pdo = connect($host, $db, $user, $password);
+    $pdo = Connection::make($host, $db, $user, $password);
+    $sql = 'INSERT INTO publishers(name) VALUES(:name)';
+
+    $statement = $pdo->prepare($sql);
+    // $statement->execute([
+    //     ':name' => $name
+    // ]);
+
+    // $publisher_id = $pdo->lastInsertId();
+
+    // echo 'The publisher id ' . $publisher_id . ' was added.';
+
+    foreach($names as $name){
+        $statement->execute([
+            ':name' => $name
+        ]);
+    }
