@@ -291,3 +291,14 @@
     // foreach($publishers as $publisher){
     //     echo $publisher['publisher_id'] . '.' . $publisher['name'] . '<br>';
     // }
+
+    # fetchColumn()
+    // $sql = 'SELECT name FROM publishers WHERE publisher_id = :publisher_id';
+
+    // $statement = $pdo->prepare($sql);
+    // $statement->execute(
+    //     ['publisher_id' => 1]
+    // );
+
+    // $publisher_name = $statement->fetchColumn();
+    // echo $publisher_name;
