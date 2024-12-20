@@ -209,4 +209,41 @@
     // }
 
     // Using prepared statement
-    
+    // $publisher_id = 100;
+    // $sql = 'SELECT publisher_id, name 
+    // FROM publishers
+    // WHERE publisher_id = :publisher_id';
+
+    // $statement = $pdo->prepare($sql);
+    // $statement->bindParam(':publisher_id', $publisher_id, PDO::PARAM_INT);
+    // $statement->execute();
+    // $publisher = $statement->fetch(PDO::FETCH_ASSOC);
+
+    // if ($publisher) {
+    //     echo $publisher['publisher_id'] . '.' . $publisher['name'];
+    // } else {
+    //     echo "The publisher with id $publisher_id was not found.";
+    // }
+
+    # Delete Statement
+    // $publisher_id = 7;
+    // $sql = 'DELETE FROM publishers WHERE publisher_id = :publisher_id';
+
+    // $statement = $pdo->prepare($sql);
+    // $statement->bindParam(':publisher_id', $publisher_id, PDO::PARAM_INT);
+
+    // if($statement->execute()){
+    //     echo 'publisher id ' . $publisher_id . ' was deleted successfully.';
+    // }
+
+    // Delete Multiple rows
+    // $publisher_id = 3;
+    // $sql = 'DELETE FROM publishers
+    //     WHERE publisher_id > :publisher_id';
+
+    // $statement = $pdo->prepare($sql);
+    // $statement->bindParam(':publisher_id', $publisher_id, PDO::PARAM_INT);
+
+    // if ($statement->execute()) {
+    //     echo $statement->rowCount() . ' row(s) was deleted successfully.';
+    // }
