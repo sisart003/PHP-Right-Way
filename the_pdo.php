@@ -264,6 +264,30 @@
     //     ':publisher_id' => 1
     // ]);
 
-    // while(($row = $statement->fetch(PDO::FETCH_ASSIC))){
+    // while(($row = $statement->fetch(PDO::FETCH_ASSOC))){
     //     echo $row['title'] . PHP_EOL;
+    // }
+
+    // fetchAll()
+    // $sql = 'SELECT publisher_id, name FROM publishers';
+
+    // $statement = $pdo->query($sql);
+    // $publishers = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    // foreach($publishers as $publisher){
+    //     echo $publisher['name'] . '<br>';
+    // }
+
+    // fetchAll() with prepared statement
+    // $sql = 'SELECT publisher_id, name FROM publishers WHERE publisher_id > :publisher_id';
+
+    // $statement = $pdo->prepare($sql);
+    // $statement->execute([
+    //     ':publisher_id' => 2
+    // ]);
+
+    // $publishers = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    // foreach($publishers as $publisher){
+    //     echo $publisher['publisher_id'] . '.' . $publisher['name'] . '<br>';
     // }
