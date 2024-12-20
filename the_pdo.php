@@ -148,3 +148,35 @@
 
     // $books = get_book_list($pdo, [1, 2, 3]);
     // print_r($books);
+
+    # Insert Data
+    // insert a single publisher
+    // $name = "Gorgc";
+    // $sql = 'INSERT INTO publishers(name) VALUES(:name)';
+    // $statement = $pdo->prepare($sql);
+    // $statement->execute([
+    //     ':name' => $name
+    // ]);
+
+    // $publisher_id = $pdo->lastInsertId();
+    // echo 'The publisher id ' . $publisher_id . ' was inserted';
+
+    // Inserting multiple rows
+    // $names = [
+    //     'Penguin/Random House',
+    //     'Hachette Book Group',
+    //     'Harper Collins',
+    //     'Simon and Schuster'
+    // ];
+
+    // $sql = 'INSERT INTO publishers(name) VALUES(:name)';
+
+    // $statement = $pdo->prepare($sql);
+
+    // foreach($names as $name){
+    //     $statement->execute([
+    //         ':name' => $name
+    //     ]);
+    // };
+
+    
