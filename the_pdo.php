@@ -247,3 +247,23 @@
     // if ($statement->execute()) {
     //     echo $statement->rowCount() . ' row(s) was deleted successfully.';
     // }
+
+    # fetch()
+    // $sql = 'SELECT book_id, title from books';
+    // $statement = $pdo->query($sql);
+
+    // while(($row = $statement->fetch(PDO::FETCH_ASSOC)) !== false){
+    //     echo $row['title'] . '<br>';
+    // }
+
+    // fetch() with prepared statement
+    // $sql = 'SELECT book_id, title FROM books WHERE publisher_id =:publisher_id';
+    // $statement = $pdo->prepare($sql);
+
+    // $statement->execute([
+    //     ':publisher_id' => 1
+    // ]);
+
+    // while(($row = $statement->fetch(PDO::FETCH_ASSIC))){
+    //     echo $row['title'] . PHP_EOL;
+    // }
