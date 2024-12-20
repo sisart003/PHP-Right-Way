@@ -194,3 +194,19 @@
     // if($statement->execute()){
     //     echo 'The publisher has been updated';
     // }
+
+    # PDO Querying Data
+    // Using query() method
+    // $sql = 'SELECT publisher_id, name FROM publishers';
+    // $statement = $pdo->query($sql);
+
+    // $publishers = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    // if($publishers){
+    //     foreach($publishers as $publisher){
+    //         echo $publisher['name'] . '<br>';
+    //     }
+    // }
+
+    // Using prepared statement
+    

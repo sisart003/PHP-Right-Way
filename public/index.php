@@ -19,8 +19,22 @@
     require_once '../the_pdo.php';
     $pdo = Connection::make($host, $db, $user, $password);
     // var_dump($pdo);
+    $publisher_id = 100;
+    $sql = 'SELECT publisher_id, name 
+    FROM publishers
+    WHERE publisher_id = :publisher_id';
 
+    $statement = $pdo->prepare($sql);
+    $statement->bindParam(':publisher_id', $publisher_id, PDO::PARAM_INT);
+    $statement->execute();
+    $publisher = $statement->fetch(PDO::FETCH_ASSOC);
 
+    if ($publisher) {
+        echo $publisher['publisher_id'] . '.' . $publisher['name'];
+    } else {
+        echo "The publisher with id $publisher_id was not found.";
+    }
+   
 
  ?>
 
