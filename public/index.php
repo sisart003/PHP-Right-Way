@@ -16,8 +16,11 @@
 
     // require_once '../the_oop.php';
     // require './app/bootstrap.php';
-    $pdo = require_once '../the_pdo.php';
+    require_once '../the_pdo.php';
+    $pdo = Connection::make($host, $db, $user, $password);
     // var_dump($pdo);
+
+
 
  ?>
 

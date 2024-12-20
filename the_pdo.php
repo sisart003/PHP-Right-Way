@@ -1,5 +1,5 @@
 <?php
-
+    // declare(strict_types=1);
     # Connect to MySQL Database
     $host = 'localhost';
     $db = 'bookdb';
@@ -88,16 +88,16 @@
     # Insert table
 
     // $name = 'Sisart003';
-    $names = [
-        'berry',
-        'gem',
-        'make'
-    ];
+    // $names = [
+    //     'berry',
+    //     'gem',
+    //     'make'
+    // ];
     // $pdo = connect($host, $db, $user, $password);
-    $pdo = Connection::make($host, $db, $user, $password);
-    $sql = 'INSERT INTO publishers(name) VALUES(:name)';
+    // $pdo = Connection::make($host, $db, $user, $password);
+    // $sql = 'INSERT INTO publishers(name) VALUES(:name)';
 
-    $statement = $pdo->prepare($sql);
+    // $statement = $pdo->prepare($sql);
     // $statement->execute([
     //     ':name' => $name
     // ]);
@@ -106,8 +106,30 @@
 
     // echo 'The publisher id ' . $publisher_id . ' was added.';
 
-    foreach($names as $name){
-        $statement->execute([
-            ':name' => $name
-        ]);
-    }
+    // foreach($names as $name){
+    //     $statement->execute([
+    //         ':name' => $name
+    //     ]);
+    // }
+
+    # LIKE % Operator
+    # find publisher by title based on pattern
+    // function find_publisher_by_title(\PDO $pdo, string $keyword) 
+    // {
+    //     $pattern = '%' . $keyword . '%';
+    //     $sql = 'SELECT * FROM publishers WHERE name LIKE :pattern';
+        
+    //     $statement = $pdo->prepare($sql);
+    //     $statement->execute([':pattern' => $pattern]);
+
+    //     return $statement->fetchAll(PDO::FETCH_ASSOC);
+    // }
+    
+    // find books wit hthe title matches 'es'
+    // $publishers = find_publisher_by_title($pdo, 'e');
+
+    // foreach($publishers as $publisher){
+    //     echo $publisher['name'] . '<br>';
+    // }
+
+    # PDO IN
