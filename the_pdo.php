@@ -179,4 +179,18 @@
     //     ]);
     // };
 
-    
+    // Update Data
+    // $publisher = [
+    //     'publisher_id' => 1,
+    //     'name' => 'McGraw-Hill Education'
+    // ];
+
+    // $sql = 'UPDATE publishers SET name = :name WHERE publisher_id = :publisher_id';
+
+    // $statement = $pdo->prepare($sql);
+    // $statement->bindParam(':publisher_id', $publisher['publisher_id'], PDO::PARAM_INT);
+    // $statement->bindParam(':name', $publisher['name']);
+
+    // if($statement->execute()){
+    //     echo 'The publisher has been updated';
+    // }
